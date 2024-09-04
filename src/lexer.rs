@@ -3,7 +3,7 @@ pub enum Token {
     Let, Fn, If, Else, Identifier(String),
     Number(i32), LeftParen, RightParen, Semicolon,
     Plus, Minus, Multiply, Divide, Equals,
-    LeftAngle, RightAngle, LeftBrace, RightBrace, PrintlnMacro,
+    LessThan, GreaterThan, LeftBrace, RightBrace, PrintlnMacro,
     EndOfInput, StringLiteral(String),
 }
 pub fn lex(input: &str) -> Vec<Token>{
@@ -18,10 +18,10 @@ pub fn lex(input: &str) -> Vec<Token>{
             'ज' => {
                 let collected: String = chars.clone().take(3).collect();
                 if collected.starts_with("जब") {
-                    // Advance the iterator by 3 characters
-                    chars.nth(2); // Skips 3 characters, so it moves the iterator past 'जब'
-                    tokens.push(Token::Let);  // Replace with your actual token
-                    continue; // Skip to the next iteration
+
+                    chars.nth(2); // Skips 3 characters
+                    tokens.push(Token::Let);
+                    continue;
                 }
             }
             'क' => {
@@ -52,7 +52,7 @@ pub fn lex(input: &str) -> Vec<Token>{
                 let collected: String = chars.clone().take(3).collect();
                 if collected.starts_with("तब") {
                     chars.nth(2);
-                    tokens.push(Token::If);
+                    tokens.push(Token::PrintlnMacro);
                     continue;
                 }
             }
@@ -116,11 +116,11 @@ pub fn lex(input: &str) -> Vec<Token>{
             }
             '>' => {
                 chars.next();
-                tokens.push(Token::LeftAngle);
+                tokens.push(Token::GreaterThan);
             }
             '<' => {
                 chars.next();
-                tokens.push(Token::RightAngle);
+                tokens.push(Token::LessThan);
             }
             '{' => {
                 chars.next();
