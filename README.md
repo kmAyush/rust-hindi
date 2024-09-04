@@ -5,7 +5,7 @@ On the idea of Domain specific language, build as a way to learn lexer, parser a
 <strong>Source Code -> Lexer/Lexical Analyzer [Tokens] -> Parser [Statements] -> Abstract Syntax Tree</strong>
 
 ### Code input in Hindi 
-```commandline
+```python
 जब संख्या = 10;
 यदि संख्या > 5 {
     तब("संख्या बड़ी है 5 से");
@@ -13,7 +13,7 @@ On the idea of Domain specific language, build as a way to learn lexer, parser a
 ```
 
 ### Output
-```commandline
+```python
 /home/$ cargo run 
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
      Running `target/debug/hindi`
