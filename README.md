@@ -1,4 +1,4 @@
-# Toy implementation of Rust in Hindi
+# Toy implementation of Hindi-based Rust
 On the idea of Domain specific language, build as a way to learn lexer, parser and abstract syntax tree and about the working of compiler. Still a lot case implementations are required to cover enough cases, it works for simple case right now.
 
 
