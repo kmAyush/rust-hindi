@@ -1,5 +1,5 @@
 # Toy implementation of Rust in Hindi
-As a way to learn lexer, parser and abstract syntax tree to learn about the working of compiler. Still a lot code implementation is required to cover all cases, it works for some simple case right now.
+On the idea of Domain specific language, build as a way to learn lexer, parser and abstract syntax tree and about the working of compiler. Still a lot case implementations are required to cover enough cases, it works for simple case right now.
 
 
 <strong>Source Code -> Lexer/Lexical Analyzer [Tokens] -> Parser [Statements] -> Abstract Syntax Tree</strong>
